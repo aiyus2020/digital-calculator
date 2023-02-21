@@ -6,7 +6,8 @@ function press(num) {
   userinput.value = expression;
 }
 function equal(e) {
-  userinput.value = eval(expression);
+  let next = userinput.value
+  userinput.value = `${next} = ${eval(expression)}`;
   expression = "";
 }
 function erase() {
